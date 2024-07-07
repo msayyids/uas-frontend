@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const ListItem = styled.li`
   color: white;
@@ -16,7 +16,7 @@ const ListItem = styled.li`
 const NavbarChildren = ({ text, path }) => {
   return (
     <ListItem>
-      <Link to={path}>{text}</Link>
+      <NavLink to={path}>{text}</NavLink>
     </ListItem>
   );
 };
