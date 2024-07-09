@@ -1,9 +1,14 @@
 import styled from 'styled-components';
 
+export const Copywright =  styled.p`
+font-size: 25px;
+font-weight: 400;
+line-height: 37.5px;
+text-align: left;
+
+`
+
 export const Nav = styled.nav`
-  position:sticky;
-  width: 100%;
-  top: 0;
   background-color: #06D6A0;
   color: white;
   display: flex;
@@ -21,7 +26,6 @@ export const NavContainer = styled.div`
 `;
 
 export const NavContent = styled.div`
-  display: block;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -73,6 +77,7 @@ export const MobileMenu = styled.div`
   @media (max-width: 768px) {
     display: block;
     width: 100%;
+    background-color: #00b894;
   }
 `;
 

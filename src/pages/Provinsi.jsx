@@ -3,10 +3,10 @@ import Forms from "../components/Form/Form";
 import Hero from "../components/Hero/Hero";
 import { CovidContext } from "../Context/context";
 import data from "../utils/constants/provinces";
-import ProvinceLocalCase from "../components/ProvinsiLocalData/ProvinceLocalCase";
+import Tabless from "../components/Table/table";
 
 const IndonesiaLocalPage = () => {
-  const { setProvinsiLocalData } = useContext(CovidContext);
+  const { setProvinsiLocalData, provinsiLocalData } = useContext(CovidContext);
 
   useEffect(() => {
     setProvinsiLocalData(data.provinces)
@@ -15,7 +15,7 @@ const IndonesiaLocalPage = () => {
   return (
     <>
       <Hero />
-      <ProvinceLocalCase/>
+      <Tabless data={provinsiLocalData} title="Provinsi" subtitle="Data covid berdasarkan provinsi" />
       <Forms />
     </>
   );

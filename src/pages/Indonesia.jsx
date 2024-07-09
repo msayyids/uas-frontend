@@ -4,10 +4,10 @@ import endpoint from "../utils/constants/endpoint";
 import axios from "axios";
 import Hero from "../components/Hero/Hero";
 import IndonesiaCase from "../components/Indonesia/IndonesiaCase";
-import ProvinceCase from "../components/Provinsi/ProvinceCase";
+import Tabless from "../components/Table/table";
 
 const IndonesiaPage = () => {
-  const { setIndonesiaData, setProvinsiData } = useContext(CovidContext);
+  const { setIndonesiaData, setProvinsiData, provinsiData } = useContext(CovidContext);
 
   useEffect(() => {
     fectIndoesiacase();
@@ -18,14 +18,13 @@ const IndonesiaPage = () => {
     const response = await axios(url);
     setIndonesiaData(response.data.indonesia);
     setProvinsiData(response.data.regions);
-    console.log(response.data.regions);
   };
 
   return (
     <>
       <Hero />
       <IndonesiaCase />
-      <ProvinceCase/>
+      <Tabless data={provinsiData} title="Situation by Provinces" subtitle="Data Indonesia Berdasarkan Provinsi" />
     </>
   );
 };

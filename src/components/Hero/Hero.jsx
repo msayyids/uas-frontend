@@ -2,6 +2,7 @@
 import Button from '../Button/Button';
 import Subtitle from '../SubTitle/Subtitle';
 import Title from '../Title/Title';
+import HeroImage from '../../asset/hero-image.png'
 import {
   HeroContainer,
   HeroContent,
@@ -27,7 +28,7 @@ const Hero = () => {
         </TextContainer>
         <ImageContainer>
           <StyledImage
-            src="https://images.pexels.com/photos/4167561/pexels-photo-4167561.jpeg?auto=compress&cs=tinysrgb&w=500"
+            src={HeroImage}
             alt=""
           />
         </ImageContainer>

@@ -2,8 +2,8 @@
 import styled from 'styled-components';
 
 export const Section = styled.div`
-  padding: 2.5rem;
   background-color: #f1f5f9;
+  padding: 2.5rem 0;
 `;
 
 export const Container = styled.div`

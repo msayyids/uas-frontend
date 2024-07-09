@@ -1,27 +1,43 @@
-import { TableRow, TableCell } from "./table.styled";
+import { Container, InnerContainer, Header, TableContainer, Table, TableHeader, TableBody, TableRow, TableCell } from './table.styled';
+import Title from "../Title/Title";
+import Subtitle from "../SubTitle/Subtitle";
 
-const Tabless = ({ datas, index }) => {
-  const { name, kota, kasus, sembuh, meninggal, dirawat, numbers } = datas;
-
-  const displayName = name || kota;
-  const displayConfirmed =
-    kasus !== undefined ? kasus : numbers ? numbers.confirmed : undefined;
-  const displayRecovered =
-    sembuh !== undefined ? sembuh : numbers ? numbers.recovered : undefined;
-  const displayTreatment =
-    dirawat !== undefined ? dirawat : numbers ? numbers.treatment : undefined;
-  const displayDeath =
-    meninggal !== undefined ? meninggal : numbers ? numbers.death : undefined;
-
+const Tabless = ({ data, title, subtitle }) => {
   return (
-    <TableRow>
-      <TableCell>{index + 1}</TableCell>
-      <TableCell>{displayName}</TableCell>
-      <TableCell>{displayConfirmed}</TableCell>
-      <TableCell>{displayRecovered}</TableCell>
-      <TableCell>{displayTreatment}</TableCell>
-      <TableCell>{displayDeath}</TableCell>
-    </TableRow>
+    <Container>
+      <InnerContainer>
+        <Header>
+          <Title text={title}/>
+          <Subtitle text={subtitle}/>
+        </Header>
+        <TableContainer>
+          <Table>
+            <thead>
+              <tr>
+                <TableHeader>No</TableHeader>
+                <TableHeader>Provinsi</TableHeader>
+                <TableHeader>Positif</TableHeader>
+                <TableHeader>Sembuh</TableHeader>
+                <TableHeader>Dirawat</TableHeader>
+                <TableHeader>Meninggal</TableHeader>
+              </tr>
+            </thead>
+            <TableBody>
+              {data.map((d, index) => (
+                <TableRow key={d.name || d.kota}>
+                  <TableCell>{index + 1}</TableCell>
+                  <TableCell>{d.name || d.kota}</TableCell>
+                  <TableCell>{d.kasus !== undefined ? d.kasus : d.numbers?.confirmed}</TableCell>
+                  <TableCell>{d.sembuh !== undefined ? d.sembuh : d.numbers?.recovered}</TableCell>
+                  <TableCell>{d.dirawat !== undefined ? d.dirawat : d.numbers?.treatment}</TableCell>
+                  <TableCell>{d.meninggal !== undefined ? d.meninggal : d.numbers?.death}</TableCell>
+                </TableRow>
+              ))}
+            </TableBody>
+          </Table>
+        </TableContainer>
+      </InnerContainer>
+    </Container>
   );
 };
 

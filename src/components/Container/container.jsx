@@ -1,12 +1,12 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
-const Container = ({children})=>{
+const Container = ({ children }) => {
+  const Div = styled.div`
+    margin: 0 auto;
+  `;
+  return (
+    <Div>{children}</Div>
+  )
+};
 
-    const Div =styled.div`
-    `
-    return (
-        <Div>{children}</Div>
-    )
-}
-
-export default Container
+export default Container;
