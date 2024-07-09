@@ -15,6 +15,7 @@ import {
 } from './Form.styled';
 import { CovidContext } from '../../Context/context';
 import Title from '../Title/Title';
+import FooterImage from '../../asset/Image.png'
 
 const Forms = () => {
   const { provinsiLocalData, setProvinsiLocalData } = useContext(CovidContext);
@@ -79,7 +80,7 @@ const Forms = () => {
         <ContentContainer>
           <ImageContainer>
             <StyledImage
-              src="https://images.pexels.com/photos/4167561/pexels-photo-4167561.jpeg?auto=compress&cs=tinysrgb&w=500"
+              src={FooterImage}
               alt=""
             />
           </ImageContainer>

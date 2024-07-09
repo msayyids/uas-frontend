@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 export const Nav = styled.nav`
   position:sticky;
+  z-index: 1000;
   width: 100%;
   top: 0;
   background-color: #06D6A0;

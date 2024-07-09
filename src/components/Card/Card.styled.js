@@ -2,18 +2,17 @@
 import styled from 'styled-components';
 
 export const CardContainer = styled.div`
-  width: 384px;
+  width: 450px;
   text-align: center;
   border: 1px solid #cbd5e1;
   padding: 1.5rem;
   background-color: white;
   border-radius: 20px;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  ;
-  margin-bottom: 1.5rem;
+  margin: 1.5rem auto;
 
   @media (min-width: 768px) {
-    padding: 3rem;
+    padding:3rem 0rem;
     margin-bottom: 0;
   }
 `;
@@ -21,7 +20,6 @@ export const CardContainer = styled.div`
 export const StatusText = styled.p`
   font-size: 39px;
   font-weight: 500;
-  padding-bottom: 0.75rem;
   color: #073B4C;
 
 
@@ -31,7 +29,7 @@ export const StatusText = styled.p`
 `;
 
 export const TotalText = styled.p`
-  font-size: 2.25rem;
+  font-size: 61px;
 
   @media (min-width: 768px) {
     font-size: 3.75rem;

@@ -28,8 +28,13 @@ const StyledButton = styled.button`
   ${(props) => props.category === 'Secondary' && secondaryStyles}
 `;
 
+
 const Button = ({ category = 'Primary', text }) => {
-  return <StyledButton category={category}>{text}</StyledButton>;
+
+  const handleClick = () => {
+    window.open("https://vaksin.kemkes.go.id/#/vaccines","_blank")
+  }
+  return <StyledButton onClick={handleClick} category={category}>{text}</StyledButton>;
 };
 
 export default Button;
