@@ -2,7 +2,7 @@
 import styled from 'styled-components';
 
 export const CardContainer = styled.div`
-  width: 450px;
+  width: 400px;
   text-align: center;
   border: 1px solid #cbd5e1;
   padding: 1.5rem;
