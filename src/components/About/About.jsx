@@ -27,11 +27,7 @@ const AboutUsSection = () => {
       <Paragraph>
         Semoga semakin sukses karirnya, menjadi programmer yang membawa banyak manfaat,
         dan ilmu yang diberikan menjadi lebih berkah. Semoga setiap kode
-        yang ditulis menjadi solusi bagi banyak orang, dan menjadi pundi pundi
-        kekayaan.Sukses selalu buat semuanya.
-        <br />
-        <br/>
-        framework is temporary,fundamental is permanent.
+        yang ditulis menjadi solusi bagi banyak orang. Sukses selalu buat semuanya.
       </Paragraph>
     </Wrapper>
   );
