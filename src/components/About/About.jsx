@@ -21,9 +21,11 @@ const Paragraph = styled.p`
 `;
 
 const AboutUsSection = () => {
+
+  const text = "big thanks to ka aufa billah"
   return (
     <Wrapper>
-      <Title text={"big thanks to ka aufa billah"} />
+      <Title text={text} />
       <Paragraph>
         Semoga semakin sukses karirnya, menjadi programmer yang membawa banyak manfaat,
         dan ilmu yang diberikan menjadi lebih berkah. Semoga setiap kode
